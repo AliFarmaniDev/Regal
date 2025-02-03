@@ -1,7 +1,11 @@
-<script setup></script>
+<script setup>
+import MainBanner from '@/components/MainBanner.vue';
+</script>
 
 <template>
   <div>
-    <h2 class="text-shade-7 text-[20px]">صفحه اصلی</h2>
+    <div class="w-full">
+      <MainBanner />
+    </div>
   </div>
 </template>

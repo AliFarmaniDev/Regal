@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-
+@import url('./font.css');
 @theme {
   --color-primary: #b19276;
   --color-shade-9: #120f0c;
@@ -92,4 +92,5 @@
 * {
   box-sizing: border-box;
   direction: rtl;
+  font-family: Vazirmatn;
 }

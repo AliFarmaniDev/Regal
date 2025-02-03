@@ -1,9 +1,97 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #b19276;
+  --color-shade-9: #120f0c;
+  --color-shade-8: #231d18;
+  --color-shade-7: #352c23;
+  --color-shade-6: #473a2f;
+  --color-shade-5: #59493b;
+  --color-shade-4: #6a5847;
+  --color-shade-3: #7c6653;
+  --color-shade-2: #8e755e;
+  --color-shade-1: #9f836a;
+  --color-tint-9: #b99d84;
+  --color-tint-8: #c1a891;
+  --color-tint-7: #c8b39f;
+  --color-tint-6: #d0bead;
+  --color-tint-5: #d8c8bb;
+  --color-tint-4: #e0d3c8;
+  --color-tint-3: #e8ded6;
+  --color-tint-2: #efe9e4;
+  --color-tint-1: #f7f4f1;
+  --color-gray-13: #23242e;
+  --color-gray-12: #2e2f39;
+  --color-gray-11: #3c3d45;
+  --color-gray-10: #54555d;
+  --color-gray-9: #6d6d74;
+  --color-gray-8: #85858b;
+  --color-gray-7: #9d9ea2;
+  --color-gray-6: #b6b6b9;
+  --color-gray-5: #ceced1;
+  --color-gray-4: #e7e7e8;
+  --color-gray-3: #f2f2f3;
+  --color-gray-2: #f7f7f8;
+  --color-gray-1: #fafafa;
+  --color-error: #ff6666;
+  --color-err-shade-4: #331414;
+  --color-err-shade-3: #662929;
+  --color-err-shade-2: #993d3d;
+  --color-err-shade-1: #cc5252;
+  --color-err-tint-4: #ff8585;
+  --color-err-tint-3: #ffa3a3;
+  --color-err-tint-2: #ffc2c2;
+  --color-err-tint-1: #ffe0e0;
+  --color-success: #32cd32;
+  --color-succ-shade-4: #0a290a;
+  --color-succ-shade-3: #145214;
+  --color-succ-shade-2: #1e7b1e;
+  --color-succ-shade-1: #28a428;
+  --color-succ-tint-4: #6fe36f;
+  --color-succ-tint-3: #9cec9c;
+  --color-succ-tint-2: #cbf5cb;
+  --color-succ-tint-1: #f3fdf3;
+  --color-warning: #ffc107;
+  --color-warn-shade-4: #332701;
+  --color-warn-shade-3: #664d03;
+  --color-warn-shade-2: #997404;
+  --color-warn-shade-1: #cc9a06;
+  --color-warn-tint-4: #ffdf7d;
+  --color-warn-tint-3: #ffe9a8;
+  --color-warn-tint-2: #fff4d4;
+  --color-warn-tint-1: #fffcf5;
+  --color-info: #1e90ff;
+  --color-info-shade-4: #061d33;
+  --color-info-shade-3: #0c3a66;
+  --color-info-shade-2: #125699;
+  --color-info-shade-1: #1873cc;
+  --color-info-tint-4: #7dbfff;
+  --color-info-tint-3: #a9d5ff;
+  --color-info-tint-2: #d4eaff;
+  --color-info-tint-1: #f4f9ff;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  direction: rtl;
 }
